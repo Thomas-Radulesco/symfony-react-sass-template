@@ -19,11 +19,13 @@
 7. Open a terminal in the directory you cloned this repo in, and enter :
 
     - `composer update`,
-    - `yarn`
+    - `yarn install`
   
 8. If everything is OK, you can proceed with :
-    - `symfony serve` 
-    - `yarn watch`
+    - `symfony serve`
+    You can stop the Symfony server anytime in that terminal with `CTRL+C`. If you want to detach the symfony server from that terminal (notice that you won't see its logs then!), to continue working in it, feel free to enter `symfony serve -d`. In that case you'll need `symfony server:stop` to stop the server
+    - `yarn watch` to start the front server. Like the Symfony one, you can stop it anytime with `CTRL+C`
+    Or you can enter `yarn build` to build your front app (but there's no point in building an empty app, is it ?)
   
   You should be good to go ! React front files are in `assets/`. For example, if you want to modify the "home", you have to modify `assets/Components/Home.js`.
   Symfony back files are in `src/` . Your twig templates are in `templates/`
